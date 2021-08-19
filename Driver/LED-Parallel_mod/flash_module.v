@@ -1,15 +1,12 @@
+ `timescale 1ns / 1ps
  /* LED 闪烁 */
  
  module flash_module(
-     CLK,
-     RSTn,
-     LED_Out
+    input CLK,
+    input RSTn,
+    output LED_Out
  );
-
-    input CLK;
-    input RSTn;
-    output LED_Out;
-
+ 
     parameter T50MS = 22'd2_499_999;
 
     reg [21:0] Count1;
