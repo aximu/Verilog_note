@@ -40,7 +40,7 @@ module rank_TB;
  reg[11:0] mem0_re[700:0];
  integer    temp_i = 0;
 
- initial $readmemh("C:/Users/74339/Desktop/vivado_code/ranking/data.txt",mem0_re);
+ initial $readmemh("E:/program/vivado/rank/data.txt",mem0_re);
 
 
  always #5 aclk <= !aclk;

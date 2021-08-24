@@ -29,15 +29,15 @@ module rank(
  output reg [7:0]   out_data    //输出信号数据
     );
 
- reg [7:0]  state   [255:0][255:0]; //比较大小记录寄存器
+ reg [7:0]  state   [255:0][255:0]; //比较大小记录寄存�?
  reg [7:0]  sum [255:0];    //比较大小记录求和
  reg [7:0]  save_data   [255:0];    //输入数据存储
  reg    [7:0]   output_data [255:0];    //输出数据缓存
- reg    cacu_flag = 0;  //计算比较标志位
- reg    output_flag = 0;    //输出信号标志位
- reg clear_state = 0;   //清除内存标志位
+ reg    cacu_flag = 0;  //计算比较标志�?
+ reg    output_flag = 0;    //输出信号标志�?
+ reg clear_state = 0;   //清除内存标志�?
 
- //一些计数变量
+ //�?些计数变�?
  integer out_data_i = 0;
  integer dat_num = 0;
  integer    temp_i = 0;
@@ -53,7 +53,7 @@ module rank(
     saving = 2'b10;
  reg    [1:0]   mst_exec_state;  
 
- initial $readmemh("C:/Users/74339/Desktop/vivado_code/ranking/int.txt",sum);
+// initial $readmemh("E:\program\vivado\rank/int.txt",sum);
 
  always@(posedge aclk)  //清理内存逻辑控制
  begin
@@ -71,7 +71,7 @@ module rank(
   end
  end
 
- always@(posedge aclk)  //计算开始逻辑控制
+ always@(posedge aclk)  //计算�?始�?�辑控制
  begin
   if(dat_num>255)
   begin
