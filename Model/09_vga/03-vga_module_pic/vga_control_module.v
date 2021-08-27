@@ -5,7 +5,7 @@ module vga_control_module
 	 Rom_Data, Rom_Addr,
 	 Red_Sig, Green_Sig, Blue_Sig
 );
-    input CLK;
+     input CLK;
 	 input RSTn;
 	 input Ready_Sig;
 	 input [10:0]Column_Addr_Sig;
@@ -19,7 +19,7 @@ module vga_control_module
 	 output Blue_Sig;
 	
 	 /**********************************/
-	 
+	 //register m is to read the row addr
 	 reg [5:0]m;
 	 
 	 always @ ( posedge CLK or negedge RSTn )
@@ -29,7 +29,7 @@ module vga_control_module
 		      m <= Row_Addr_Sig[5:0];
 				
 	/************************************/
-	
+	// register n is to read the column addr
 	reg [5:0]n;
 	
 	always @ ( posedge CLK or negedge RSTn )
@@ -40,7 +40,7 @@ module vga_control_module
 				
 	/************************************/
 	
-    assign Rom_Addr = m;
+    assign Rom_Addr = m;		//used row address to read data frome ROM
 	
 	 assign Red_Sig =  Ready_Sig ? Rom_Data[ 6'd63 - n ] : 1'b0;
 	 assign Green_Sig = Ready_Sig ? Rom_Data[ 6'd63 - n ] : 1'b0;

@@ -7,7 +7,7 @@ module vga_module
 	 Red_Sig, Green_Sig, Blue_Sig 
 );
 
-    input CLK;
+     input CLK;
 	 input RSTn;
 	 output VSYNC_Sig;
 	 output HSYNC_Sig;
@@ -21,8 +21,8 @@ module vga_module
 	 
 	 pll_module U1
 	 (
-	     .inclk0( CLK ),    // input - from top
-		  .c0( CLK_40Mhz )   // output - to inter global
+	     .inclk0( CLK ),    //  input - from top
+		 .c0( CLK_40Mhz )   // output - to inter global
 	 );
 	 
 	 /**************************************/
