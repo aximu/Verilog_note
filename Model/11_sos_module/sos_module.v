@@ -65,9 +65,12 @@ module sos_module
 	 reg Pin_Out;
 	 
 	 always @ ( * )
-	     if( S_Start_Sig ) Pin_Out = S_Pin_Out;      // select from U1
-		  else if( O_Start_Sig ) Pin_Out = O_Pin_Out;  // select from U2
-		  else Pin_Out = 1'bx; 
+	     if( S_Start_Sig ) 
+		 	Pin_Out = S_Pin_Out;      // select from U1
+		  else if( O_Start_Sig ) 
+		  	Pin_Out = O_Pin_Out;  // select from U2
+		  else 
+		  	Pin_Out = 1'bx; 
 		  
     /*********************************/
 

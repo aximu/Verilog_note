@@ -4,9 +4,9 @@ module sos_module_demo
 	 Pin_Out
 );
 
-    input CLK;
-	 input RSTn;
-	 output Pin_Out;
+		input CLK;
+		input RSTn;
+		output Pin_Out;
 	 
 	 /***********************/
 	 

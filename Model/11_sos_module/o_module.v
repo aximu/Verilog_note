@@ -6,15 +6,15 @@ module o_module
 	 Pin_Out
 );
 
-     input CLK;
-	  input RSTn;
-	  input Start_Sig;
-	  output Done_Sig;
-	  output Pin_Out;
+	input CLK;
+	input RSTn;
+	input Start_Sig;
+	output Done_Sig;
+	output Pin_Out;
 	  
 	  /****************************************/
 	 
-	 parameter T1MS = 17'd49_999;
+	 parameter T1MS = 17'd49_999;			//delay 1ms
 	 
 	 /***************************************/
 	 

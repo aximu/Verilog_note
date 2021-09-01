@@ -7,12 +7,12 @@ module sos_control_module
 	 Done_Sig
 );
 
-    input CLK;
-	 input RSTn;
-	 input Start_Sig;
-	 input S_Done_Sig, O_Done_Sig;
-	 output S_Start_Sig, O_Start_Sig;
-	 output Done_Sig;
+	input CLK;
+	input RSTn;
+	input Start_Sig;
+	input S_Done_Sig, O_Done_Sig;
+	output S_Start_Sig, O_Start_Sig;
+	output Done_Sig;
 	 
 	 /*************************************/
 	 
